@@ -21,4 +21,4 @@ jobs:
 
     - name: Run CWL workflow
       run: |
-        cwltool extract_pubid.cwl input.yml
+        cwltool extract_pubid.cwl input.yaml
