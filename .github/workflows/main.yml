@@ -20,6 +20,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install cwltool
 
+    - name: Install Python packages
+      run: pip install pandas
+
     - name: Run CWL workflow
       run: |
         cwltool $GITHUB_WORKSPACE/extract_pubid.cwl $GITHUB_WORKSPACE/input.yaml
