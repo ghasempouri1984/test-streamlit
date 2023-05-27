@@ -1,4 +1,6 @@
 name: Run CWL workflow
+run: |
+        cwltool $GITHUB_WORKSPACE/extract_pubid.cwl $GITHUB_WORKSPACE/input.yaml
 
 on: [push, pull_request]
 
