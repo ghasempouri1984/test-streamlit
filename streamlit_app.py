@@ -82,7 +82,6 @@ def viz5():
     countries = all_countries.iloc[:30]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Journal_count', y='Country', data=countries, palette='flare')
-    plt.xscale('log')
     plt.xlabel('Journal Count')
     plt.ylabel('Countries')
     plt.title('Journals by Country (Top 30)')
@@ -96,7 +95,6 @@ def viz6():
     last_countries = all_countries.iloc[-30:]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Publication_count', y='Country', data=last_countries, palette='flare')
-    plt.xscale('log')
     plt.xlabel('Publication Count')
     plt.ylabel('Countries')
     plt.title('Publications by Country  (Last 30)')
@@ -110,7 +108,6 @@ def viz7():
     last_countries = all_countries.iloc[-30:]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Journal_count', y='Country', data=last_countries, palette='flare')
-    plt.xscale('log')
     plt.xlabel('Journal Count')
     plt.ylabel('Countries')
     plt.title('Journals by Country (Last 30)')
