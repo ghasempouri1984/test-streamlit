@@ -137,7 +137,16 @@ def viz8():
     st.pyplot(plt)
     
 # Streamlit code
+def show_article():
+    with open('your_article.html', 'r') as file:
+        file_contents = file.read()
+    st.markdown(file_contents, unsafe_allow_html=True)
+
+
 def main():
+    
+    if st.button('Show Article'):
+        show_article()
     
     st.title("GitHub Repo")
     
