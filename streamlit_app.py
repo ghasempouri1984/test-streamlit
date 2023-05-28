@@ -9,6 +9,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
+import numpy as np
 
 # Load data
 country_df = pd.read_csv('countries.csv')
@@ -61,7 +62,7 @@ def viz3():
 
 # Fourth viz
 def viz4():
-    all_countries = country.sort_values(by='Publication_count', ascending=False)
+    all_countries = country_df.sort_values(by='Publication_count', ascending=False)
     countries = all_countries.iloc[:30]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Publication_count', y='Country', data=countries, palette='flare')
@@ -77,6 +78,8 @@ def viz4():
     
 # Fourth viz
 def viz5():
+    all_countries = country_df.sort_values(by='Publication_count', ascending=False)
+    countries = all_countries.iloc[:30]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Journal_count', y='Country', data=countries, palette='flare')
     plt.xscale('log')
@@ -88,6 +91,7 @@ def viz5():
     st.pyplot(plt)
     
 def viz6():
+    all_countries = country_df.sort_values(by='Publication_count', ascending=False)
     last_countries = all_countries.iloc[-30:]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Publication_count', y='Country', data=last_countries, palette='flare')
@@ -101,6 +105,7 @@ def viz6():
     
 # Fourth viz
 def viz7():
+    all_countries = country_df.sort_values(by='Publication_count', ascending=False)
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Journal_count', y='Country', data=last_countries, palette='flare')
     plt.xscale('log')
