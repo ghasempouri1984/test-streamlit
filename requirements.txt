@@ -3,4 +3,5 @@ pandas
 seaborn
 matplotlib
 plotly
-BeautifulSoup
+requests
+beautifulsoup4
