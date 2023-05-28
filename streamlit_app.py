@@ -145,7 +145,7 @@ def show_article1():
     st.markdown(file_contents, unsafe_allow_html=True)
 
 def show_article():
-    url = 'https://github.com/ghasempouri1984/test-streamlit/blob/main/requirements.txt'
+    url = 'https://apod.nasa.gov/apod/archivepix.html'
     response = requests.get(url)
     
     soup = BeautifulSoup(response.text, 'html.parser')
