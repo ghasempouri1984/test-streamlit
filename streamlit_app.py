@@ -145,7 +145,7 @@ def show_article1():
     st.markdown(file_contents, unsafe_allow_html=True)
 
 def show_article():
-    url = 'https://www.protocols.io/view/research-on-erih-plus-approved-ssh-journals-presen-cuuawwse'
+    url = 'https://github.com/ghasempouri1984/test-streamlit/blob/main/requirements.txt'
     response = requests.get(url)
     
     soup = BeautifulSoup(response.text, 'html.parser')
