@@ -69,16 +69,16 @@ def viz4():
     plt.xscale('log')
     plt.xlabel('Publication Count')
     plt.ylabel('Countries')
-    plt.title('Publications by Country  (Top 30)')
+    plt.title('Publications by Country (Top 30)')
     plt.grid(axis="x", linewidth=0.2)
     x_values = np.array([100, 1000, 10000, 100000, 1000000])
     plt.xticks(x_values, x_values)
 
     st.pyplot(plt)
     
-# Fourth viz
+# Fifth viz
 def viz5():
-    all_countries = country_df.sort_values(by='Publication_count', ascending=False)
+    all_countries = country_df.sort_values(by='Journal_count', ascending=False)
     countries = all_countries.iloc[:30]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Journal_count', y='Country', data=countries, palette='flare')
@@ -89,7 +89,8 @@ def viz5():
     plt.grid(axis="x", linewidth=0.2)
 
     st.pyplot(plt)
-    
+
+# Sixth viz
 def viz6():
     all_countries = country_df.sort_values(by='Publication_count', ascending=False)
     last_countries = all_countries.iloc[-30:]
@@ -103,9 +104,10 @@ def viz6():
 
     st.pyplot(plt)
     
-# Fourth viz
+# Seventh viz
 def viz7():
-    all_countries = country_df.sort_values(by='Publication_count', ascending=False)
+    all_countries = country_df.sort_values(by='Journal_count', ascending=False)
+    last_countries = all_countries.iloc[-30:]
     plt.figure(figsize=(10, 8))
     sns.barplot(x='Journal_count', y='Country', data=last_countries, palette='flare')
     plt.xscale('log')
