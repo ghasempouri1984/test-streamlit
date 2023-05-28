@@ -138,7 +138,7 @@ def viz8():
     
 # Streamlit code
 def show_article():
-    with open('your_article.html', 'r') as file:
+    with open('https://www.protocols.io/view/research-on-erih-plus-approved-ssh-journals-presen-cuuawwse', 'r') as file:
         file_contents = file.read()
     st.markdown(file_contents, unsafe_allow_html=True)
 
