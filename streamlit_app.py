@@ -14,6 +14,16 @@ import numpy as np
 # Load data
 country_df = pd.read_csv('countries.csv')
 
+
+st.markdown(
+        """
+        [Here is a link to my article](https://example.com)
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+
 # First Viz
 def viz1():
     total_erih_plus = 11128
