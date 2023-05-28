@@ -94,7 +94,7 @@ def viz6():
     all_countries = country_df.sort_values(by='Publication_count', ascending=False)
     last_countries = all_countries.iloc[-30:]
     plt.figure(figsize=(10, 8))
-    sns.barplot(x='Publication_count', y='Country', data=last_countries, palette='flare')
+    sns.barplot(x='Publication_count', y='Country', data=last_countries, palette='viridis')
     plt.xlabel('Publication Count')
     plt.ylabel('Countries')
     plt.title('Publications by Country  (Last 30)')
@@ -107,7 +107,7 @@ def viz7():
     all_countries = country_df.sort_values(by='Journal_count', ascending=False)
     last_countries = all_countries.iloc[-30:]
     plt.figure(figsize=(10, 8))
-    sns.barplot(x='Journal_count', y='Country', data=last_countries, palette='flare')
+    sns.barplot(x='Journal_count', y='Country', data=last_countries, palette='viridis')
     plt.xlabel('Journal Count')
     plt.ylabel('Countries')
     plt.title('Journals by Country (Last 30)')
