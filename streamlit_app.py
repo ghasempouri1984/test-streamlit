@@ -139,25 +139,25 @@ def viz8():
     st.pyplot(plt)
     
 # Streamlit code
-def show_article1():
-    with open('https://www.protocols.io/view/research-on-erih-plus-approved-ssh-journals-presen-cuuawwse', 'r') as file:
-        file_contents = file.read()
-    st.markdown(file_contents, unsafe_allow_html=True)
+#def show_article1():
+    #with open('https://www.protocols.io/view/research-on-erih-plus-approved-ssh-journals-presen-cuuawwse', 'r') as file:
+        #file_contents = file.read()
+    #st.markdown(file_contents, unsafe_allow_html=True)
 
-def show_article():
-    url = 'https://apod.nasa.gov/apod/archivepix.html'
-    response = requests.get(url)
+#def show_article():
+    #url = 'https://apod.nasa.gov/apod/archivepix.html'
+    #response = requests.get(url)
     
-    soup = BeautifulSoup(response.text, 'html.parser')
-    body = soup.find('body')
+    #soup = BeautifulSoup(response.text, 'html.parser')
+    #body = soup.find('body')
 
-    st.markdown(str(body), unsafe_allow_html=True)
+    #st.markdown(str(body), unsafe_allow_html=True)
 
 
 def main():
     
-    if st.button('Show Article'):
-        show_article()
+    #if st.button('Show Article'):
+        #show_article()
     
     st.title("GitHub Repo")
     
