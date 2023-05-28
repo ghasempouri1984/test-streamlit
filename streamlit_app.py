@@ -59,6 +59,79 @@ def viz3():
                         title='Publications by Country')
     st.plotly_chart(fig)
 
+# Fourth viz
+def viz4():
+    all_countries = country.sort_values(by='Publication_count', ascending=False)
+    countries = all_countries.iloc[:30]
+    plt.figure(figsize=(10, 8))
+    sns.barplot(x='Publication_count', y='Country', data=countries, palette='flare')
+    plt.xscale('log')
+    plt.xlabel('Publication Count')
+    plt.ylabel('Countries')
+    plt.title('Publications by Country  (Top 30)')
+    plt.grid(axis="x", linewidth=0.2)
+    x_values = np.array([100, 1000, 10000, 100000, 1000000])
+    plt.xticks(x_values, x_values)
+
+    st.pyplot(plt)
+    
+# Fourth viz
+def viz5():
+    plt.figure(figsize=(10, 8))
+    sns.barplot(x='Journal_count', y='Country', data=countries, palette='flare')
+    plt.xscale('log')
+    plt.xlabel('Journal Count')
+    plt.ylabel('Countries')
+    plt.title('Journals by Country (Top 30)')
+    plt.grid(axis="x", linewidth=0.2)
+
+    st.pyplot(plt)
+    
+def viz6():
+    last_countries = all_countries.iloc[-30:]
+    plt.figure(figsize=(10, 8))
+    sns.barplot(x='Publication_count', y='Country', data=last_countries, palette='flare')
+    plt.xscale('log')
+    plt.xlabel('Publication Count')
+    plt.ylabel('Countries')
+    plt.title('Publications by Country  (Last 30)')
+    plt.grid(axis="x", linewidth=0.2)
+
+    st.pyplot(plt)
+    
+# Fourth viz
+def viz7():
+    plt.figure(figsize=(10, 8))
+    sns.barplot(x='Journal_count', y='Country', data=last_countries, palette='flare')
+    plt.xscale('log')
+    plt.xlabel('Journal Count')
+    plt.ylabel('Countries')
+    plt.title('Journals by Country (Last 30)')
+    plt.grid(axis="x", linewidth=0.2)
+
+    st.pyplot(plt)
+
+# Eight viz
+def viz8():
+    disciplines = pd.read_csv('disciplines.csv')  # replace '<your file>' with your actual file path
+
+    colors = ['steelblue', 'skyblue', 'lightskyblue', 'deepskyblue', 'dodgerblue', 'cornflowerblue',
+              'mediumblue', 'royalblue', 'mediumslateblue', 'slateblue', 'blueviolet', 'darkviolet',
+              'mediumorchid', 'indigo', 'purple', 'darkmagenta', 'palegreen', 'limegreen', 'forestgreen',
+              'darkgreen', 'gold', 'goldenrod', 'darkorange', 'chocolate', 'sienna', 'saddlebrown',
+              'tomato', 'orangered', 'firebrick', 'crimson', 'maroon']
+
+    sns.set()  # Imposta le impostazioni predefinite di seaborn
+
+    plt.figure(figsize=(10, 6))
+    sns.barplot(data=disciplines, x='Publication_count', y='Discipline', palette=colors)
+    plt.xlabel('Publications')
+    plt.ylabel('Discipline')
+    plt.title('Publications by Disciplines')
+    plt.grid(axis="x", linewidth=0.2)
+
+    st.pyplot(plt)
+    
 # Streamlit code
 def main():
     st.title("Visualizations")
@@ -68,6 +141,16 @@ def main():
     viz2()
     st.header("Publications by Country")
     viz3()
+    st.header("Publications by Country Top 30")
+    viz4()
+    st.header("Journals by Country Top 30")
+    viz5()
+    st.header("Publications by Country Last 30")
+    viz6()
+    st.header("Journals by Country Last 30")
+    viz7()
+    st.header("Publications by Discipline")
+    viz8()
 
 if __name__ == "__main__":
     main()
