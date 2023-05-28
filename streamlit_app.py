@@ -14,16 +14,6 @@ import numpy as np
 # Load data
 country_df = pd.read_csv('countries.csv')
 
-
-st.markdown(
-        """
-        [Here is a link to my article](https://example.com)
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-
 # First Viz
 def viz1():
     total_erih_plus = 11128
@@ -149,6 +139,13 @@ def viz8():
 # Streamlit code
 def main():
     st.title("Visualizations")
+    
+    st.markdown(
+        """
+        [Here is a link to my article](https://example.com)
+        """,
+        unsafe_allow_html=True,
+    )
     st.header("ERIH Plus Journals in OC Meta Coverage")
     viz1()
     st.header("Open Access Status")
