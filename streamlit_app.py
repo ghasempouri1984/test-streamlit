@@ -138,14 +138,17 @@ def viz8():
     
 # Streamlit code
 def main():
-    st.title("Visualizations")
+    st.title("Article")
     
     st.markdown(
         """
-        [Here is a link to my article](https://example.com)
+        [Here is a link to our article](https://example.com)
         """,
         unsafe_allow_html=True,
     )
+    
+    st.title("Visualizations")
+    
     st.header("ERIH Plus Journals in OC Meta Coverage")
     viz1()
     st.header("Open Access Status")
