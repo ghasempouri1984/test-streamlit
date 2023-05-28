@@ -4,4 +4,4 @@ seaborn
 matplotlib
 plotly
 requests
-beautifulsoup
+beautifulsoup4
