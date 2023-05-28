@@ -138,6 +138,16 @@ def viz8():
     
 # Streamlit code
 def main():
+    
+    st.title("GitHub Repo")
+    
+    st.markdown(
+        """
+        [Here is a link to our software GitHub repo](https://example.com)
+        """,
+        unsafe_allow_html=True,
+    )
+    
     st.title("Article")
     
     st.markdown(
